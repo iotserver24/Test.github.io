@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (userChoice === 'promo') {
         window.location.href = 'https://promo.cc';
     } else {
-        mainContainer.style.display = 'block';
+        mainContainer.style.display = 'block'; // Show the main container
     }
 
     getStartedButton.addEventListener('click', function() {
