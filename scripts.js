@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitPromoButton = document.getElementById('submit-promo');
     const promoSection = document.getElementById('promo-section');
     const promoCodeInput = document.getElementById('promo-code');
-    const mainContainer = document.getElementById('main-container');
 
     // Check local storage for user choice
     const userChoice = localStorage.getItem('userChoice');
@@ -13,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (userChoice === 'promo') {
         window.location.href = 'https://promo.cc';
     } else {
-        mainContainer.style.display = 'block'; // Show the main container
+        // If no choice is made yet, show the get started button and promo section
+        getStartedButton.classList.remove('hidden');
+        promoSection.classList.remove('hidden');
     }
 
     getStartedButton.addEventListener('click', function() {
